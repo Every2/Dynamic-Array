@@ -1,0 +1,1 @@
+A function that just verify if vector exists and free the memory that vector used.

@@ -1,0 +1,1 @@
+Print macro is a generic approach of printf function, the generic macro was used to create the multiple types printf. Of course to run this code you need an C compiler in C11+ version.

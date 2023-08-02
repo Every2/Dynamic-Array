@@ -1,0 +1,1 @@
+Size function checks if vector exist and return it size.
