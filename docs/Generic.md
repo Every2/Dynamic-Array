@@ -1,0 +1,3 @@
+An enumeration Generic is defined, which represents different data types. This enumeration is used to specify the type of data that can be stored in the GenericValue structure.
+
+GenericValue is a structure that combines a data type (Generic) and a union that can store different types of values based on the type. This structure is designed to represent generic values, allowing the storage of integers, characters, floating-point numbers, strings, or references to other vectors.

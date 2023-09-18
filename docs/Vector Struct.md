@@ -1,4 +1,4 @@
-void** Array: Is a pointer to pointer. it's the responsible for storing the data adresses. Being void allow different types.
+GenericValue* Array: A pointer to an array of GenericValue elements
 
 size_t Size: Store the current size of Vector. size_t is used to detonate the size of vector.
 

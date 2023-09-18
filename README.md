@@ -6,4 +6,6 @@ This implementation is basic and aiming train C syntax and concepts, no need to 
 
 # To do
 
-- [] Update docs
+- [x] Update docs
+- [ ] Add more operations to Vector.
+- [ ] Add better tests.

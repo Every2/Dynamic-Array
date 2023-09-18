@@ -1,9 +1,6 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 
-#include <stdio.h>
-#include <stdlib.h>
-
 typedef enum {
     INT,
     CHAR, 
@@ -34,6 +31,6 @@ void freeVector(Vector* vector);
 int append(Vector* vector, GenericValue element);
 size_t size(Vector* vector);
 GenericValue get(Vector* vector, size_t index);
-void printGeneric(GenericValue value);
+void print(GenericValue value);
 
 #endif /* VECTOR_H */

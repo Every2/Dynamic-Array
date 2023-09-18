@@ -87,7 +87,7 @@ GenericValue get(Vector* vector, size_t index) {
     return vector->array[index];
 }
 
-void printGeneric(GenericValue value) {
+void print(GenericValue value) {
     switch (value.type) {
         case INT:
             printf("%d\n", value.integer);

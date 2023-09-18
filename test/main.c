@@ -28,7 +28,7 @@ int main() {
     append(vector, value);
     
     for (size_t i = 0; i < size(vector); i++) {
-        printGeneric(get(vector, i));
+        print(get(vector, i));
     }
     
     freeVector(vector);
