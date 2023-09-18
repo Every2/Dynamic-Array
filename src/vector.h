@@ -4,18 +4,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define print(x) _Generic((x), int: printf("%d\n", x), char: printf("%c\n", x), float: printf("%f\n", x), default: printf("Unknown type\n"))
+typedef enum {
+    INT,
+    CHAR, 
+    FLOAT,
+    STRING,
+    VECTOR
+} Generic;
 
 typedef struct {
-    void** array;
+    Generic type;
+    union {
+    int integer;
+    char character;
+    float floatpointer;
+    char* string;
+    struct Vector* vector;
+    };
+} GenericValue;
+
+typedef struct {
+    GenericValue* array;
     size_t size;
     size_t capacity;
 } Vector;
 
 Vector* createVector(size_t initialCapacity);
 void freeVector(Vector* vector);
-int append(Vector* vector, void* element);
+int append(Vector* vector, GenericValue element);
 size_t size(Vector* vector);
-void* get(Vector* vector, size_t index);
+GenericValue get(Vector* vector, size_t index);
+void printGeneric(GenericValue value);
 
 #endif /* VECTOR_H */

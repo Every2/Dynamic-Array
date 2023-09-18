@@ -3,24 +3,35 @@
 #include <stdlib.h>
 
 int main() {
-    Vector* myArray = createVector(5);
-
-
-    int intValue = 10;
+    int intValue = 42;
     char charValue = 'A';
     float floatValue = 3.14;
+    char* stringValue = "Hello, world!";
+    
+    Vector* vector = createVector(5);
+    
+    GenericValue value;
+    value.type = INT;
+    value.integer = intValue;
+    append(vector, value);
 
-    append(myArray, &charValue);
-    append(myArray, &intValue);
-    append(myArray, &floatValue);
+    value.type = CHAR;
+    value.character = charValue;
+    append(vector, value);
 
-    for (size_t i = 0; i < size(myArray); i++) {
-        print(intValue);
-        print(charValue);
-        print(floatValue);
+    value.type = FLOAT;
+    value.floatpointer = floatValue;
+    append(vector, value);
+
+    value.type = STRING;
+    value.string = stringValue;
+    append(vector, value);
+    
+    for (size_t i = 0; i < size(vector); i++) {
+        printGeneric(get(vector, i));
     }
-
-    freeVector(myArray);
-
+    
+    freeVector(vector);
+    
     return 0;
 }
